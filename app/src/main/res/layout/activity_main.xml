@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/backgroundAPP"
+    tools:ignore="ExtraText">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <View
+        android:id="@+id/viewTitulo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/FondoBotones"
+
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/tituloApp"
+        android:textColor="@color/TextoColor"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTitulo"
+        app:layout_constraintEnd_toEndOf="@+id/viewTitulo"
+        app:layout_constraintStart_toStartOf="@+id/viewTitulo"
+        app:layout_constraintTop_toTopOf="@+id/viewTitulo" />
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/txtBrutoAnual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/FondoBotones"
+
+        app:cardCornerRadius="16dp"
+
+
+        app:layout_constraintTop_toBottomOf="@id/viewTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bruto Anual"
+                android:textColor="@color/TextoColor" />
+
+            <EditText
+                android:id="@+id/brutoAnual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/txtNumPagas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/FondoBotones"
+
+        app:cardCornerRadius="16dp"
+
+        app:layout_constraintStart_toEndOf="@id/txtBrutoAnual"
+        app:layout_constraintTop_toBottomOf="@id/viewTitulo"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nº de Pagas"
+                android:textColor="@color/TextoColor" />
+
+            <EditText
+                android:id="@+id/nPagas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/txtEdad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/FondoBotones"
+
+        app:cardCornerRadius="16dp"
+
+        app:layout_constraintStart_toEndOf="@id/txtNumPagas"
+        app:layout_constraintTop_toBottomOf="@id/viewTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edad"
+                android:textColor="@color/TextoColor" />
+
+            <EditText
+                android:id="@+id/nEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/txtGrupoProfesional"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/FondoBotones"
+
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtGradoDiscapacidad"
+
+        app:layout_constraintTop_toBottomOf="@id/txtBrutoAnual">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grupo Profesional"
+                android:textColor="@color/TextoColor" />
+
+            <EditText
+                android:id="@+id/gProfesional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/txtGradoDiscapacidad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/FondoBotones"
+
+        app:cardCornerRadius="16dp"
+
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBrutoAnual">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grado Discapacidad"
+                android:textColor="@color/TextoColor" />
+
+            <EditText
+                android:id="@+id/gDiscapacidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/txtEstadoCivil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/FondoBotones"
+
+        app:cardCornerRadius="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtHijos"
+
+        app:layout_constraintTop_toBottomOf="@id/txtGrupoProfesional">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado Civil"
+                android:textColor="@color/TextoColor" />
+
+            <EditText
+                android:id="@+id/eCivil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/txtHijos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/FondoBotones"
+
+        app:cardCornerRadius="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/txtGrupoProfesional">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero Hijos"
+            android:textColor="@color/TextoColor" />
+
+        <EditText
+            android:id="@+id/nHijos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtEstadoCivil"
+        app:layout_constraintBottom_toBottomOf="@id/btnCalc"
+
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCalc"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular salario neto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEstadoCivil"
+        android:background="@color/FondoBotones"
+        android:textColor="@color/TextoColor"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
